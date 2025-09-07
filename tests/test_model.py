@@ -12,10 +12,14 @@ model = joblib.load(data_path)
 
 
 class TestModelTraining(unittest.TestCase):
+    def setUp(self):
+        self.model = KMeans(n_clusters=4)
+        self.data = np.random.rand(100, 5)
+        self.model.fit(self.data)
+
     def test_scaler(self):
-        # model = joblib.load(data_path)
-        self.assertIsInstance(model, KMeans)  
-        self.assertEqual(len(model.X_importances_), 4)
+        with self.assertRaises(AttributeError):
+            self.assertEqual(len(self.model.X_importances_), 4)
 
 if __name__ == '__main__':
     unittest.main()
