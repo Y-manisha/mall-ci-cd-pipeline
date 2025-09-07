@@ -14,7 +14,7 @@ X = df[["Annual Income (k$)", "Spending Score (1-100)"]]
 
 # Load saved model
 BASE_DIR = os.path.dirname(os.path.dirname(__file__)) # go one level updata_path = os.path.join(BASE_DIR, 'Mall_Customer_model.pkl')
-model = joblib.load(Mall_Customers)
+model = joblib.load("data/Mall_Customers.csv")
 
 # Scale the data
 X_scaled = scaler.transform(X)
