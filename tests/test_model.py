@@ -1,6 +1,7 @@
 # test.py
 
 import unittest
+from sklearn.cluster import KMeans
 import joblib
 import os
 
