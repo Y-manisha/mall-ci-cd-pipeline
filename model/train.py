@@ -16,8 +16,8 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Train KMeans with 5 clusters
-kmeans = KMeans(n_clusters=5, random_state=42)
-kmeans.fit(X_scaled)
+model = KMeans(n_clusters=5, random_state=42)
+model.fit(X_scaled)
 
 # Save the model 
 model = joblib.dump(model, "Mall_Customer_model.pkl")
