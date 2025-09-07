@@ -4,6 +4,7 @@ import unittest
 from sklearn.cluster import KMeans
 import joblib
 import os
+import numpy as np
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__)) # go one level up
 data_path = os.path.join(BASE_DIR, 'Mall_Customers_model.pkl')
