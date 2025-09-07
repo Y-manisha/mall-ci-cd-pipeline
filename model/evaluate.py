@@ -18,8 +18,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__)) # go one level
 data_path = os.path.join(BASE_DIR, 'Mall_Customers_model.pkl')
 model = joblib.load(data_path)
 
-# Scale the data
-X_scaled = scaler.transform(X)
+# Scale features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
 
 # Predict clusters
 labels = model.predict(X_scaled)
