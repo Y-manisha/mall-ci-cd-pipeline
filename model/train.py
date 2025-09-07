@@ -20,4 +20,4 @@ kmeans = KMeans(n_clusters=5, random_state=42)
 kmeans.fit(X_scaled)
 
 # Save the model 
-joblib.dump(model, "Mall_Customer_model.pkl")
+model = joblib.dump(model, "Mall_Customer_model.pkl")
