@@ -15,7 +15,7 @@ class TestModelTraining(unittest.TestCase):
     def test_scaler(self):
         # model = joblib.load(data_path)
         self.assertIsInstance(model, KMeans)  
-        self.assertEqual(len(model.feature_importances_), 4)
+        self.assertEqual(len(model.X_importances_), 4)
 
 if __name__ == '__main__':
     unittest.main()
